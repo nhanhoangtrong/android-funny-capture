@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/topLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    tools:context="com.example.nhanht.facedetection.MainActivity">
+
+    <com.example.nhanht.facedetection.views.CameraSourcePreview
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:id="@+id/cameraPreview">
+        <com.example.nhanht.facedetection.views.GraphicOverlay
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/graphicOverlay"/>
+    </com.example.nhanht.facedetection.views.CameraSourcePreview>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@id/cameraPreview"
+        android:text="Capture"
+        android:onClick="onClickCapture"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/cameraPreview"
+        android:layout_alignParentLeft="true"
+        android:text="Gallery"
+        android:onClick="onClickGallery"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/cameraPreview"
+        android:layout_alignParentRight="true"
+        android:text="Switch"
+        android:onClick="onClickSwitch"/>
+
+</RelativeLayout>
